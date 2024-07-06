@@ -3,7 +3,7 @@ A simple A* algorithm visualization, using pygame.
 
 TOC - Time Of Completion = 2 hours.
 
-`This project is licensed under the MIT License with Attribution. See the LICENSE file for details.`
+`This project is licensed under the GPL-3.0 License. See the LICENSE file for details.`
 
 
 Hello. I wrote this fine program to show and implement the A* algorithm in an easy-to-understand format. In addition, because I didn't use the pygame library before, I saw a great opportunity in this project to both, use the pygame library for the first time, and implement one of the greatest algorithms for pathfinding.
