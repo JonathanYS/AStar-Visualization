@@ -10,10 +10,10 @@ Hello. I wrote this fine program to show and implement the A* algorithm in an ea
 I must say, I had a wonderful time working on this project.
 
 ## Instructions Of The "Game"
-When you first start the "game", you will see a start tile (in <span style="color: #37FF48;"><b>green</b></span>) and the target tile (in <span style="color: #FA272E;"><b>red</b></span>) will be marked where your mouse is placed in the window of the game (more accurately, in the frame of the game's window).
+When you first start the "game", you will see a start tile (in $\textcolor{#37FF48}{\text{green}}$) and the target tile (in $\textcolor{#FA272E}{\text{red}}$) will be marked where your mouse is placed in the window of the game (more accurately, in the frame of the game's window).
 If you want to place obstacles, you need to `right click` on the mouse, anywhere in the "game's" window. Of course, you can't place an obstacle where the start tile is.
-Obstacles are marked in <span style="color: #060028;"><b>dark purple</b></span> (dark purple).
-The shortest path, determined by the A* algorithm is marked in <span style="color: #3C69FA;"><b>blue</b></span>.
+Obstacles are marked in $\textcolor{#060028}{\text{dark purple}}$ (dark purple).
+The shortest path, determined by the A* algorithm is marked in $\textcolor{#3C69FA}{\text{blue}}$.
 
 If you would like to remove a specific obstacle, just stand on it with your mouse and `right-click` it.
 
