@@ -174,7 +174,7 @@ def main() -> None:
     It is responsible for handling the entire program using the various available functions.
     :return None:
     """
-    global TILE_SIZE, target_position, obstacles
+    global target_position, obstacles
     run = True
 
     # Draw grid
