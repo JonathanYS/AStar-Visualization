@@ -5,7 +5,6 @@ This program was written by Yonatan Deri.
 import pygame
 import logging
 from astar_algo import AStar
-import math
 import darkdetect
 
 pygame.init()
@@ -107,7 +106,7 @@ def set_target(position: tuple[int, int], forced: bool = False) -> None:
         highlight_tile(tile=target_position, color=BG)
         draw_grid()
         position_list = list(position)
-        tile = (math.floor(position_list[0] / 30), math.floor(position_list[1] / 30))
+        tile = (position_list[0] // TILE_SIZE, position_list[1] // TILE_SIZE)
         highlight_tile(tile=tile, color=RED)
 
         target_position = tile
@@ -116,7 +115,7 @@ def set_target(position: tuple[int, int], forced: bool = False) -> None:
             highlight_tile(tile=target_position, color=BG)
             draw_grid()
             position_list = list(position)
-            tile = (math.floor(position_list[0] / 30), math.floor(position_list[1] / 30))
+            tile = (position_list[0] // TILE_SIZE, position_list[1] // TILE_SIZE)
             highlight_tile(tile=tile, color=RED)
 
             target_position = tile
@@ -132,7 +131,7 @@ def add_obstacle(position: tuple[int, int]) -> None:
     """
     global obstacles
     position_list = list(position)
-    tile = (math.floor(position_list[0] / 30), math.floor(position_list[1] / 30))
+    tile = (position_list[0] // TILE_SIZE, position_list[1] // TILE_SIZE)
     if tile != start_position:
         if tile in obstacles:
             obstacles.remove(tile)
@@ -163,7 +162,7 @@ def switch_start_position(position: tuple[int, int]) -> None:
     """
     global start_position, obstacles
     position_list = list(position)
-    tile = (math.floor(position_list[0] / 30), math.floor(position_list[1] / 30))
+    tile = (position_list[0] // TILE_SIZE, position_list[1] // TILE_SIZE)
     if tile != start_position and tile not in obstacles:
         start_position = tile
         draw_grid()
@@ -188,7 +187,7 @@ def main() -> None:
 
         position = pygame.mouse.get_pos()
         position_list = list(position)
-        tile = (math.floor(position_list[0] / 30), math.floor(position_list[1] / 30))
+        tile = (position_list[0] // TILE_SIZE, position_list[1] // TILE_SIZE)
         response, route = AStar(start=start_position, target=target_position, obstacles=obstacles).main_function()
         if response == 1:
             draw_path(route)

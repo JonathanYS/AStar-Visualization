@@ -3,7 +3,6 @@ This program was written by Yonatan Deri.
 """
 from node import Node
 import heapq
-import math
 
 
 MAX_BORDER_VALUE = 19
@@ -64,7 +63,7 @@ class AStar:
         :return float:
         """
         # Calculate the heuristic value of a cell (Euclidean distance to destination - based on the Pythagorean theorem)
-        return math.sqrt((tile[0] - self.target[0]) ** 2 + (tile[1] - self.target[1]) ** 2)
+        return ((tile[0] - self.target[0]) ** 2 + (tile[1] - self.target[1]) ** 2) ** 0.5
 
     def main_function(self) -> tuple[int, list]:
         """
